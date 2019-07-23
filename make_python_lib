@@ -1,0 +1,5 @@
+# detect OS
+OSUPPER = $(shell uname -s 2>/dev/null | tr [:lower:] [:upper:])
+OSLOWER = $(shell uname -s 2>/dev/null | tr [:upper:] [:lower:])
+
+gcc -fPIC -shared -o ./pythonlib/litholib.so -g  ./pythonlib/*.c -lm 
